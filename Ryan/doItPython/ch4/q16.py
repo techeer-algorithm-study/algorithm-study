@@ -1,0 +1,1 @@
+#if not swap print index of not swap
