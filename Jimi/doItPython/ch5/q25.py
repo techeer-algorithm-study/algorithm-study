@@ -28,6 +28,7 @@ for i in range(n): # 노드마다 DFS 실행
         break
 
 if arrive: # 5에 도달하면 1 출력
+    print(A)
     print(1)
 else:
     print(0)
