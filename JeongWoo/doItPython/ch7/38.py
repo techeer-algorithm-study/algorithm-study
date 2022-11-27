@@ -17,7 +17,7 @@ for i in range(2, 1000001) :
     if A[i] != 0 :
         temp = A[i]
         while A[i] <= Max / temp:
-            if A[i] >= Max / temp :
+            if A[i] >= Min / temp :
                 count += 1
             temp = temp * A[i]
 
