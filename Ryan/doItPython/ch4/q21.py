@@ -26,9 +26,10 @@ for j in range(0,n,2):
 
 i = len(lst2) - 1
 while len(lst2) > 1:
+    print(lst2)
     lst2[i] = sort_list(lst2[i]) # sort the list[i] inside list
     lst2[i-1] = sort_list(lst2[i-1]) # sort list left of the list[i]
-    if lst2[i][0] > lst2[i-1][0]: # check index values and concatenate accordingly
+    if lst2[i][0] > lst2[i-1][0]: # check index values and concatenate accordingly. This parts needs revision
         lst2[i-1] += lst2[i]
         lst2.remove(lst2[i])
     else:
