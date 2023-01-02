@@ -1,0 +1,23 @@
+D=[0]*51 # 색깔별 조약돌 개수 리스트
+p=[0]*51 # 색깔별 확률 저장 리스트
+
+M=int(input()) # 색의 종류
+D=list(map(int, input().split())) # 색깔별 조약돌 개수 리스트
+K=int(input()) # 선택하는 조약돌의 개수
+
+T=0 # 전체 조약돌 개수
+
+# 전체 조약돌 개수 구하기
+for i in range(0,M):
+    T+=D[i]
+
+answer=0
+
+for i in range(0,M):
+    if D[i]>=K:
+        p[i]=1
+        for k in range(0,K):
+            p[i]=p[i]*(D[i]-k)/(T-k) # 공식
+        answer+=p[i]
+
+print(answer)
